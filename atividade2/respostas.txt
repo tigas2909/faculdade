@@ -1,0 +1,11 @@
+i) Quantas vezes apareceu a mensagem “Chamou o método init”?
+R: nenhuma vez.
+
+ii) Quantas vezes apareceu a mensagem “Chamou o método service”?
+R: 2 vezes.
+
+iii) Quantas vezes apareceu a mensagem “Chamou o método destroy”?
+R: nehuma vez. 
+
+iv) Atualizando seu navegador muitas vezes, apertando F5 por exemplo, existe algum efeito?
+R: iniciou mais uma vez o metodo service.
