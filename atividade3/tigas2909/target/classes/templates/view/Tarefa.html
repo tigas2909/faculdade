@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+</head>
+<body>
+
+<h1>Tarefas</h1>
+
+<a th:href="@{/tarefas/adicionar1}">Adicionar Tarefa</a>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Descrição</th>
+        <th>Editar</th>
+        <th>Deletar</th>
+    </tr>
+
+    <tr th:each="tarefa : ${tarefas}">
+        <td th:text="${tarefa.id}"></td>
+        <td th:text="${tarefa.titulo}"></td>
+        <td th:text="${tarefa.descricao}"></td>
+
+        <td>
+            <a th:href="@{/tarefas/editar/{id}(id=${tarefa.id})}">Editar</a>
+        </td>
+
+        <td>
+            <a th:href="@{/tarefas/deletar/{id}(id=${tarefa.id})}"
+               onclick="return confirm('Tem certeza que deseja deletar esta tarefa?')">
+                Deletar
+            </a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
